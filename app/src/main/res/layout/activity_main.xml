@@ -4,15 +4,59 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+	android:padding="16dp"
 	tools:context=".MainActivity">
 
-	<TextView
-		android:layout_width="wrap_content"
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/textViewCreditCardTitle"
+		android:layout_width="0dp"
 		android:layout_height="wrap_content"
-		android:text="Hello World!"
+		android:text="Credit Card Number"
+		android:textSize="24sp"
+		android:textStyle="bold"
+		app:layout_constraintBottom_toTopOf="@id/textViewCreditCardNumber"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_chainStyle="packed" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/textViewCreditCardNumber"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:singleLine="true"
+		android:text="4402569222344366"
+		android:textSize="20sp"
+		app:layout_constraintBottom_toTopOf="@id/textViewPhoneNumberTitle"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/textViewCreditCardTitle" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/textViewPhoneNumberTitle"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="40dp"
+		android:text="Phone Number"
+		android:textSize="24sp"
+		android:textStyle="bold"
+		app:layout_constraintBottom_toTopOf="@id/textViewPhoneNumber"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toTopOf="@id/textViewCreditCardNumber"
+		app:layout_constraintVertical_chainStyle="packed" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/textViewPhoneNumber"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:text="05555555555"
+		android:textSize="20sp"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintLeft_toLeftOf="parent"
 		app:layout_constraintRight_toRightOf="parent"
-		app:layout_constraintTop_toTopOf="parent" />
+		app:layout_constraintTop_toBottomOf="@id/textViewPhoneNumberTitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
