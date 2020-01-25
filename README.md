@@ -5,6 +5,28 @@
 ## Text Spacer
 Text Spacer is easy way of the adding space on TextView.
 
+# Usage
+```kotlin
+    val textViewCreditCardNumber = findViewById<TextView>(R.id.textViewCreditCardNumber)
+    Spacer.Builder()
+        .setPatternSequentially(4)
+        .attach(textViewCreditCardNumber)
+
+
+    val textViewPhoneNumber = findViewById<TextView>(R.id.textViewPhoneNumber)
+    Spacer.Builder()
+        .setPattern("#${SPACE}###${SPACE}###${SPACE}##${SPACE}##${SPACE}")
+        .attach(textViewPhoneNumber)
+
+
+    val textViewExample = findViewById<TextView>(R.id.textViewExample)
+    Spacer.Builder()
+        .addSpaceIndexAt(2)
+        .addSpaceIndexAt(7)
+        .addSpaceIndexAt(12)
+        .attach(textViewExample)
+```
+
 # Installation
  - To implement **Text Spacer** to your Android project via Gradle, you need to add JitPack repository to your root build.gradle.
 ```gradle
